@@ -1,4 +1,4 @@
-// API CREADA EN JAVASCRIPT PARA QUE CONSUMA Y EXTRAIGA LA IFNORMACION DE LA PAGINA https://swapi.co/api/
+// API CREADA EN JAVASCRIPT PARA QUE CONSUMA Y EXTRAIGA LA INFORMACION DE LA PAGINA https://swapi.co/api/
 
 $('.modal').modal();
 
@@ -48,6 +48,12 @@ function charactersMovie () {
 
 function paintMovie(imgMovie,titleMovie, idEpisode,templeteCharacter){
   const movieContainer = document.getElementById('movi_Container');
+  
+  // SE INTENTA CREAR UNA NUEVA FUNCION PARA QUE SE CONSUMA Y EXTRAIGA INFORMACION NO SOLO DE LA API SINO DE LOS DATOS QUE ARROJO LOCAL PARA LOS EP 8 Y 9
+	  
+   /*   function paintMovie(imgMovie,titleMovie, idEpisode,templeteCharacter){
+  const movieContainer2 = document.getElementById('movi_Container2'); */
+  
 
   let templete = `<div class="col s12 m4">
         <div class="card"
@@ -61,6 +67,7 @@ function paintMovie(imgMovie,titleMovie, idEpisode,templeteCharacter){
         </div>
       </div>`  
 	  
+  
 	   /* let templete2 = `<div class="col s12 m4">
         <div class="card"
           <div class="card-image">

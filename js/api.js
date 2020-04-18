@@ -4,7 +4,8 @@ $('.modal').modal();
 
 $.ajax({
   dataType : "json",
-  url: "https://swapi.co/api/films/"
+  /* url: "https://swapi.co/api/films/" */
+  url: "https://swapi.py4e.com/api/films"
 }).done(getData).fail(function (status) {
   console.log("error");
 });
@@ -15,8 +16,10 @@ function getData(data) {
   // console.log(arr);
   let  templeteCharacter = ``;
   $.each(arr, function(i,value){
-      let imagesArray = ["./images/a-new-hope.jpg", "./images/attack-of-the-clones.jpg","./images/the-phantom-menace.jpg", "./images/revenge-of-the-sith.jpg", "./images/return-of-the-jedi.jpg", "./images/the-empire-strikes-back.jpg", "./images/the-force-awakens.jpg", "./images/the-last-jedi.jpg", "./images/the-rise-of-skywalker.jpg"]
-      let imgMovie = imagesArray[i];
+/* 	  let imagesArray = ["./images/a-new-hope.jpg", "./images/attack-of-the-clones.jpg","./images/the-phantom-menace.jpg", "./images/revenge-of-the-sith.jpg", "./images/return-of-the-jedi.jpg", "./images/the-empire-strikes-back.jpg", "./images/the-force-awakens.jpg"]*/
+ let imagesArray = ["./images/a-new-hope.jpg","./images/the-empire-strikes-back.jpg","./images/return-of-the-jedi.jpg","./images/the-phantom-menace.jpg","./images/attack-of-the-clones.jpg", "./images/revenge-of-the-sith.jpg", "./images/the-force-awakens.jpg", "./images/the-last-jedi.jpg", "./images/the-rise-of-skywalker.jpg"]
+    
+	  let imgMovie = imagesArray[i];
       let infoMovie = value;
       // console.log(infoMovie);
       let titleMovie= infoMovie.title;
@@ -37,7 +40,8 @@ function getData(data) {
 function charactersMovie () {
     $.ajax({
       dataType : "json",
-      url: "https://swapi.co/api/people/"
+/*       url: "https://swapi.co/api/people/" */
+	   url: "https://swapi.py4e.com/api/people "
     }).done(function(json){
         const characters = json;
         const nameCharacter = characters.name;

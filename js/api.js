@@ -28,7 +28,7 @@ function getData(data) {
       // console.log(idEpisode);
       let charactersMovie = infoMovie.characters
       $.each(charactersMovie, function (key,value) {
-        templeteCharacter += `<a href="#modal1"><li class="characters" data-url="${value}"> ${value} </li></a> `
+       /* templeteCharacter += `<a href="#modal1"><li class="characters" data-url="${value}"> ${value} </li></a> `
 		/*templete2Character += `<a href="#modal1"><li class="characters" data-url="${value}"> ${value} </li></a> `
 		templete3Character += `<a href="#modal1"><li class="characters" data-url="${value}"> ${value} </li></a> ` */
 
